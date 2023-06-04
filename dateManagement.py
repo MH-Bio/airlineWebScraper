@@ -1,7 +1,12 @@
 import calendar
 import numpy as np
 from datetime import datetime
-calendar.setfirstweekday(6)
+import os
+from sys import _getframe # Used to get function names from within function
+
+FILENAME = os.path.basename(__file__)
+
+calendar.setfirstweekday(6) # sets first day of week to Sunday
 
 class departureDate:
     def __init__(self, year, month, day):
