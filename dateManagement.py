@@ -2,6 +2,7 @@ import calendar
 import numpy as np
 from datetime import datetime
 import os
+import utils
 from sys import _getframe # Used to get function names from within function
 
 FILENAME = os.path.basename(__file__)
@@ -28,6 +29,24 @@ class currentTime:
         self.currentDay = datetime.now().day
         self.currentMonth = datetime.now().month
         self.currentYear = datetime.now().year
+
+def getCurrentSecond():
+    return datetime.now().second
+
+def getCurrentMinute():
+    return datetime.now().minute
+
+def getCurrentHour():
+    return datetime.now().hour
+
+def getCurrentDay():
+    return datetime.now().day
+
+def getCurrentMonth():
+    return datetime.now().month
+
+def getCurrentYear():
+    return datetime.now().year
 
 def getMonthStrShort(monthNum):
     """Returns the three letter code used by United Airlines to input dates"""
