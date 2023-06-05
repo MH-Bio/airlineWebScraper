@@ -1,0 +1,44 @@
+{
+  "ANA": {
+    "Website":"https://www.ana.co.jp/en/us/",
+    "Routes": {
+      "TYO": [
+        "PDX",
+        "HNL",
+        "SFO",
+        "LAX",
+        "SEA",
+        "ORD",
+        "EWR",
+        "IAH",
+        "IAD",
+        "JFK",
+        "YVR"
+      ],
+      "KIX": [
+        "PDX",
+        "SFO"
+      ]
+    }
+  },
+
+  "United Airlines":{
+    "Website":"https://www.united.com/en/us",
+    "Routes": {
+      "TYO": [
+        "PDX",
+        "HNL",
+        "SFO",
+        "LAX",
+        "DEN",
+        "IAH",
+        "ORD",
+        "EWR"
+      ],
+      "KIX": [
+        "PDX",
+        "SFO"
+      ]
+    }
+  }
+}
