@@ -68,27 +68,5 @@ class priceInformation:
         self.economyPremiumPrice = economyPremiumPrice
         self.businessClassPrice = businessClassPrice
 
-def getFlightDuration(flightString):
-    """Takes a string in the format of 10H, 20M and extracts the hours and minutes.  Returns total number of minutes"""
-    timeElementsList = flightString.split()
 
-    hoursList = re.findall('[0-9]+', timeElementsList[0]) # This will return something like ['10']
-    minutesList = re.findall('[0-9]+', timeElementsList[1])
 
-    hours = int(hoursList[0])
-    minutes = int(minutesList[0])
-
-    hoursInMinutes = hours * 60
-
-    totalMinutes = hoursInMinutes + minutes
-
-    return totalMinutes
-
-def getStops(stopsString):
-    """Takes a string for the number of stops and returns an integer"""
-    if stopsString == 'NONSTOP':
-        stops = 0
-    else:
-        stops = re.findall('[0-9]+', stopsString)
-
-    return stops
