@@ -25,6 +25,7 @@ FILENAME = os.path.basename(__file__)
 option = EdgeOptions()
 option.add_argument("--InPrivate")
 '''
+time.sleep(3)
 driver = webdriver.Edge()
 #action = ActionChains(driver) # See: https://www.geeksforgeeks.org/key_down-method-action-chains-in-selenium-python/#
 #driver.add_argument("--InPrivate")
@@ -33,7 +34,7 @@ _depart_obj = dateManagement.departureDate(2023, 8, 1)
 _return_obj = dateManagement.returnDate(2023, 8, 7)
 
 def checkWebsites():
-    with open('results.csv', 'w') as csvfile:
+    with open('results.csv', 'w', newline='') as csvfile:
         filewriter = csv.writer(csvfile, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
         filewriter.writerow([#'Date',
                              'Airline',
