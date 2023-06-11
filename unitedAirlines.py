@@ -125,6 +125,7 @@ def unitedAirlines(originCode, destinationCode, departObj, driver):
     economyRefundableBase = '//*[@id="flightResults-content"]/div[3]/div[%i]/div/div[2]/div[2]/div[2]/div/div[2]/button/span/div/div[2]/span/span'
     economyPremiumBase =    '//*[@id="flightResults-content"]/div[3]/div[%i]/div/div[2]/div[3]/div[2]/div/div[2]/button/span/div/div[2]/span/span'
     businessClassBase =     '//*[@id="flightResults-content"]/div[3]/div[%i]/div/div[2]/div[4]/div[2]/div/div[2]/button/span/div/div[2]/span/span'
+    priceNotAvaliableBase = '//*[@id="flightResults-content"]/div[3]/div[%i]/div/div[2]/div[3]/div[2]/div/div[2]/div/span'
     stopsBase =             '//*[@id="flightResults-content"]/div[3]/div[%i]/div/div[1]/div[2]/div/div[1]/div[2]'
 
     flightObjList = []
@@ -140,9 +141,11 @@ def unitedAirlines(originCode, destinationCode, departObj, driver):
         economyRefundablePriceXpath = economyRefundableBase %i
         economyPremiumCostXpath = economyPremiumBase %i
         businessClassPriceBaseXpath = businessClassBase %i
+        priceNotAvaliableBaseXpath = priceNotAvaliableBase %i
         stopsXpath = stopsBase %i
 
-        time.sleep(10)
+        if i == 1:
+            time.sleep(20)
 
         # create objects we can interact with
         departureTimeStr = driver.find_element(By.XPATH, departureTimeXpath).text
@@ -150,10 +153,22 @@ def unitedAirlines(originCode, destinationCode, departObj, driver):
         departureAirportStr = driver.find_element(By.XPATH, departureAirportXpath).text
         arrivalAirportStr = driver.find_element(By.XPATH, arrivalAirportXpath).text
         durationStr = driver.find_element(By.XPATH, durationXpath).text
-        economyPriceStr = driver.find_element(By.XPATH, economyPriceXpath).text
-        economyRefundablePriceStr = driver.find_element(By.XPATH, economyRefundablePriceXpath).text
-        economyPremiumCostStr = driver.find_element(By.XPATH, economyPremiumCostXpath).text
-        businessClassPriceBaseStr = driver.find_element(By.XPATH, businessClassPriceBaseXpath).text
+        try:
+            economyPriceStr = driver.find_element(By.XPATH, economyPriceXpath).text
+        except:
+            economyPriceStr = driver.find_element(By.XPATH, priceNotAvaliableBaseXpath).text
+        try:
+            economyRefundablePriceStr = driver.find_element(By.XPATH, economyRefundablePriceXpath).text
+        except:
+            economyRefundablePriceStr = driver.find_element(By.XPATH, priceNotAvaliableBaseXpath).text
+        try:
+            economyPremiumCostStr = driver.find_element(By.XPATH, economyPremiumCostXpath).text
+        except:
+            economyPremiumCostStr = driver.find_element(By.XPATH, priceNotAvaliableBaseXpath).text
+        try:
+            businessClassPriceBaseStr = driver.find_element(By.XPATH, businessClassPriceBaseXpath).text
+        except:
+            businessClassPriceBaseStr = driver.find_element(By.XPATH, priceNotAvaliableBaseXpath).text
         stopsStr = driver.find_element(By.XPATH, stopsXpath).text
 
         flightInfoObj = utils.flightInfo(airline = 'United Airlines',
@@ -179,9 +194,6 @@ def unitedAirlines(originCode, destinationCode, departObj, driver):
                                     flightInfoObj.duration])
             f.close()
         i = i + 1
-        if i == 3:
-            import pdb
-            pdb.set_trace()
 
     return utils.ERROR_CODE['NO_ERROR']
 
