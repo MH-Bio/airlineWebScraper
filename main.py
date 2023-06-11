@@ -61,7 +61,7 @@ def checkWebsites():
     for destinationCode in united_destinationList:
         originCodeList = airlineData['United Airlines']['Routes'][destinationCode]
         for originCode in originCodeList:
-            united_obj_list, UA_return_code = unitedAirlines.unitedAirlines(originCode=originCode,
+            UA_return_code = unitedAirlines.unitedAirlines(originCode=originCode,
                                                                             destinationCode=destinationCode,
                                                                             departObj=_depart_obj, driver=driver)
             time.sleep(random.uniform(10, 30))
