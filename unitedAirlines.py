@@ -157,19 +157,19 @@ def unitedAirlines(originCode, destinationCode, departObj):
         try:
             economyPriceStr = driver.find_element(By.XPATH, economyPriceXpath).text
         except:
-            economyPriceStr = driver.find_element(By.XPATH, priceNotAvaliableBaseXpath).text
+            economyPriceStr = utils.PRICE_UNAVILABLE
         try:
             economyRefundablePriceStr = driver.find_element(By.XPATH, economyRefundablePriceXpath).text
         except:
-            economyRefundablePriceStr = driver.find_element(By.XPATH, priceNotAvaliableBaseXpath).text
+            economyRefundablePriceStr = utils.PRICE_UNAVILABLE
         try:
             economyPremiumCostStr = driver.find_element(By.XPATH, economyPremiumCostXpath).text
         except:
-            economyPremiumCostStr = driver.find_element(By.XPATH, priceNotAvaliableBaseXpath).text
+            economyPremiumCostStr = utils.PRICE_UNAVILABLE
         try:
             businessClassPriceBaseStr = driver.find_element(By.XPATH, businessClassPriceBaseXpath).text
         except:
-            businessClassPriceBaseStr = driver.find_element(By.XPATH, priceNotAvaliableBaseXpath).text
+            businessClassPriceBaseStr = utils.PRICE_UNAVILABLE
         stopsStr = driver.find_element(By.XPATH, stopsXpath).text
 
         flightInfoObj = utils.flightInfo(airline = 'United Airlines',
@@ -214,8 +214,14 @@ def getFlightDuration(flightString):
     """Takes a string in the format of 10H, 20M and extracts the hours and minutes.  Returns total number of minutes"""
     timeElementsList = flightString.split()
 
-    hoursList = re.findall('[0-9]+', timeElementsList[0]) # This will return something like ['10']
-    minutesList = re.findall('[0-9]+', timeElementsList[1])
+    try:
+        hoursList = re.findall('[0-9]+', timeElementsList[0]) # This will return something like ['10']
+    except:
+        hoursList = [0]
+    try:
+        minutesList = re.findall('[0-9]+', timeElementsList[1])
+    except:
+        minutesList = [0]
 
     hours = int(hoursList[0])
     minutes = int(minutesList[0])
