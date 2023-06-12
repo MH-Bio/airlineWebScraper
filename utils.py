@@ -2,6 +2,14 @@ import os # used to get file name
 import re
 from sys import _getframe # Used to get function names from within function
 
+# Return codes
+NO_ERROR = 0x0
+WEBSITE_ACCESS_FAILURE = 0x1
+CALENDAR_FAILURE = 0x2
+SOFTWARE_ERROR = 0x3
+TIMEOUT = 0x4
+PRICE_UNAVILABLE = 'Not available'
+
 FILENAME = os.path.basename(__file__)
 
 AIRLINE_WEBSITES = {
@@ -33,13 +41,6 @@ AIRLINE_WEBSITES = {
     'ZipAir': 'https://www.zipair.net/en'
 }
 
-ERROR_CODE = {
-    0X0: 'NO_ERROR',
-    0X1: 'WEBSITE_ACCESS_FAILURE',
-    0X2: 'CALENDAR_FAILURE',
-    0X3: 'SOFTWARE_ERROR',
-    0x4: 'TIMEOUT'
-}
 
 class flightInfo:
     def __init__(self, departureClass, arrivalClass, priceClass, airline, stops, duration, date):
