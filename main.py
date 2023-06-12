@@ -65,9 +65,12 @@ def checkWebsites():
             time.sleep(random.uniform(10, 30))
             if UA_return_code != utils.NO_ERROR:
                 print("Unable to get information from United Airlines for route %s - %s."%(originCode, destinationCode))
+                continue
+
+    return return_code
 
 def main():
-    checkWebsites()
+    return checkWebsites()
 
 
 if __name__ == '__main__':
