@@ -126,7 +126,7 @@ def unitedAirlines(originCode, destinationCode, departObj):
     economyRefundableBase = '//*[@id="flightResults-content"]/div[3]/div[%i]/div/div[2]/div[2]/div[2]/div/div[2]/button/span/div/div[2]/span/span'
     economyPremiumBase =    '//*[@id="flightResults-content"]/div[3]/div[%i]/div/div[2]/div[3]/div[2]/div/div[2]/button/span/div/div[2]/span/span'
     businessClassBase =     '//*[@id="flightResults-content"]/div[3]/div[%i]/div/div[2]/div[4]/div[2]/div/div[2]/button/span/div/div[2]/span/span'
-    priceNotAvaliableBase = '//*[@id="flightResults-content"]/div[3]/div[%i]/div/div[2]/div[3]/div[2]/div/div[2]/div/span'
+    #priceNotAvaliableBase = '//*[@id="flightResults-content"]/div[3]/div[%i]/div/div[2]/div[3]/div[2]/div/div[2]/div/span'
     stopsBase =             '//*[@id="flightResults-content"]/div[3]/div[%i]/div/div[1]/div[2]/div/div[1]/div[2]'
 
     flightObjList = []
@@ -142,7 +142,7 @@ def unitedAirlines(originCode, destinationCode, departObj):
         economyRefundablePriceXpath = economyRefundableBase %i
         economyPremiumCostXpath = economyPremiumBase %i
         businessClassPriceBaseXpath = businessClassBase %i
-        priceNotAvaliableBaseXpath = priceNotAvaliableBase %i
+        #priceNotAvaliableBaseXpath = priceNotAvaliableBase %i
         stopsXpath = stopsBase %i
 
         if i == 1:
