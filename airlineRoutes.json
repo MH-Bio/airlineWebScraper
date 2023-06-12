@@ -40,5 +40,18 @@
         "SFO"
       ]
     }
+  },
+
+    "ZipAir":{
+    "Website":"https://www.zipair.net/en",
+    "Routes": {
+      "TYO": [
+        "HNL",
+        "SFO",
+        "SJC",
+        "LAX",
+        "ICN"
+      ]
+    }
   }
 }
