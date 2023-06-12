@@ -7,12 +7,13 @@ from sys import _getframe # Used to get function names from within function
 from csv import writer
 import re
 
+from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 
 FILENAME = os.path.basename(__file__)
 
-def unitedAirlines(originCode, destinationCode, departObj, driver):
+def unitedAirlines(originCode, destinationCode, departObj):
     """Gets info from the United Airlines Website"""
     fun_name = _getframe().f_code.co_name
     driver.get(utils.AIRLINE_WEBSITES['United'])

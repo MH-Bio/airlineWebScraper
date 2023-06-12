@@ -1,4 +1,3 @@
-from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.edge.options import Options as EdgeOptions
 from selenium.webdriver.common.keys import Keys
@@ -60,8 +59,8 @@ def checkWebsites():
         originCodeList = airlineData['United Airlines']['Routes'][destinationCode]
         for originCode in originCodeList:
             UA_return_code = unitedAirlines.unitedAirlines(originCode=originCode,
-                                                                            destinationCode=destinationCode,
-                                                                            departObj=_depart_obj, driver=driver)
+                                                           destinationCode=destinationCode,
+                                                           departObj=_depart_obj)
             time.sleep(random.uniform(10, 30))
             if UA_return_code != utils.NO_ERROR:
                 print("Unable to get information from United Airlines for route %s - %s."%(originCode, destinationCode))
