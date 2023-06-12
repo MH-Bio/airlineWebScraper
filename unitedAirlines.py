@@ -16,6 +16,9 @@ FILENAME = os.path.basename(__file__)
 def unitedAirlines(originCode, destinationCode, departObj):
     """Gets info from the United Airlines Website"""
     fun_name = _getframe().f_code.co_name
+
+    time.sleep(3)
+    driver = webdriver.Edge()
     driver.get(utils.AIRLINE_WEBSITES['United'])
 
     # click on the "one way" button
@@ -146,7 +149,8 @@ def unitedAirlines(originCode, destinationCode, departObj):
         stopsXpath = stopsBase %i
 
         if i == 1:
-            time.sleep(20)
+            # TODO: Change this to wait for a page element to load
+            time.sleep(60)
 
         # create objects we can interact with
         departureTimeStr = driver.find_element(By.XPATH, departureTimeXpath).text
