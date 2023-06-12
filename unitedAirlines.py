@@ -41,7 +41,7 @@ def unitedAirlines(originCode, destinationCode, departObj, driver):
     while calendar_default_month_index < 12:
         if calendar_default_month_index == 13:
             print("Unable to find current month in calendar format date picker.  See: %s, Function: %s()" %(FILENAME, fun_name))
-            return utils.ERROR_CODE['CALENDAR_FAILURE']
+            return utils.CALENDAR_FAILURE
         if dateManagement.getMonthStrLong(calendar_default_month_index) in default_month_aria_label:
             confirmed_default_month = dateManagement.getMonthStrLong(calendar_default_month_index)
             break
@@ -59,7 +59,7 @@ def unitedAirlines(originCode, destinationCode, departObj, driver):
         i = 1 # remember we are counting the current month as month 1
         while i < difference_between_months:
             if retry_counter > 10:
-                return utils.ERROR_CODE['TIMEOUT']
+                return utils.TIMEOUT
             time.sleep(random.uniform(1, 3))
             try:
                 next_month_button[0].click() # advance one month
@@ -72,7 +72,7 @@ def unitedAirlines(originCode, destinationCode, departObj, driver):
         i = 1
         while i < difference_between_months_corrected:
             if retry_counter > 10:
-                return utils.ERROR_CODE['TIMEOUT']
+                return utils.TIMEOUT
             time.sleep(random.uniform(1, 3))
             try:
                 prev_month_button[0].click() # advance one month
@@ -195,7 +195,9 @@ def unitedAirlines(originCode, destinationCode, departObj, driver):
             f.close()
         i = i + 1
 
-    return utils.ERROR_CODE['NO_ERROR']
+    driver.close() # close the current window
+
+    return utils.NO_ERROR
 
 def getStops(stopsString):
     """Takes a string for the number of stops and returns an integer"""
