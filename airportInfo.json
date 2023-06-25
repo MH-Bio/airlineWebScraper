@@ -1,0 +1,206 @@
+{
+  "ATL": {
+    "Airport Name": "Hartsfield–Jackson Atlanta International Airport",
+    "Easy Name": "Atlanta International Airport",
+    "Country": "United States",
+    "Website": "https://www.atl.com/"
+  },
+  "BKK": {
+    "Airport Name": "Suvarnabhumi Airport",
+    "Easy Name": "Bangkok International Airport",
+    "Country": "Thailand",
+    "Website": "https://www.bangkokairportonline.com/"
+  },
+  "BOS": {
+    "Airport Name": "Boston Logan International Airport",
+    "Easy Name": "Boston Logan International Airport",
+    "Country": "United States",
+    "Website": "https://www.massport.com/logan-airport/"
+  },
+  "CTS": {
+    "Airport Name": "New Chitose Airport",
+    "Easy Name": "New Chitose Airport",
+    "Country": "Japan",
+    "Website": "https://www.new-chitose-airport.jp/en/"
+  },
+  "DEN": {
+    "Airport Name": "Denver International Airport",
+    "Easy Name": "Denver International Airport",
+    "Country": "United States",
+    "Website": "https://www.flydenver.com/"
+  },
+  "DFW": {
+    "Airport Name": "Dallas/Fort Worth International Airport",
+    "Easy Name": "Dallas/Fort Worth",
+    "Country": "United States",
+    "Website": "https://www.dfwairport.com/"
+  },
+  "EWR": {
+    "Airport Name": "Newark Liberty International Airport",
+    "Easy Name": "Newark Liberty International Airport",
+    "Country": "United States",
+    "Website": "https://www.newarkairport.com/"
+  },
+  "FUK": {
+    "Airport Name": "Fukuoka Airport",
+    "Easy Name": "Fukuoka Airport",
+    "Country": "Japan",
+    "Website": "https://www.fukuoka-airport.jp/en/"
+  },
+  "HKG": {
+    "Airport Name": "Hong Kong International Airport",
+    "Easy Name": "Hong Kong International Airport",
+    "Country": "Hong Kong",
+    "Website": "https://www.hongkongairport.com/"
+  },
+  "HND": {
+    "Airport Name": "Tokyo International Airport",
+    "Easy Name": "Haneda Airport",
+    "Country": "Japan",
+    "Website": "https://tokyo-haneda.com/en/"
+  },
+  "HNL": {
+    "Airport Name": "Daniel K. Inouye International Airport",
+    "Easy Name": "Honolulu International Airport",
+    "Country": "United States",
+    "Website": "https://airports.hawaii.gov/hnl/"
+  },
+  "IAD": {
+    "Airport Name": "Washington Dulles International Airport",
+    "Easy Name": "Dulles International Airport",
+    "Country": "United States",
+    "Website": "https://www.flydulles.com/"
+  },
+  "IAH": {
+    "Airport Name": "George Bush Intercontinental Airport",
+    "Easy Name": "Houston Airport",
+    "Country": "United States",
+    "Website": "https://www.fly2houston.com/iah/overview"
+  },
+  "ICN": {
+    "Airport Name": "Incheon International Airport",
+    "Easy Name": "Incheon International Airport",
+    "Country": "South Korea",
+    "Website": "https://www.airport.kr/ap/en/index.do"
+  },
+  "JFK": {
+    "Airport Name": "John F. Kennedy International Airport",
+    "Easy Name": "John F. Kennedy International Airport",
+    "Country": "United States",
+    "Website": "https://www.jfkairport.com/"
+  },
+  "KHH": {
+    "Airport Name": "Kaohsiung International Airport",
+    "Easy Name": "Kaohsiung International Airport",
+    "Country": "Taiwan",
+    "Website": "https://www.kia.gov.tw/english/"
+  },
+  "KIX": {
+    "Airport Name": "Kansai International Airport",
+    "Easy Name": "Kansai International Airport",
+    "Country": "Japan",
+    "Website": "https://www.kansai-airport.or.jp/en/"
+  },
+  "KOA": {
+    "Airport Name": "Ellison Onizuka Kona International Airport at Keāhole",
+    "Easy Name": "Kona International Airport",
+    "Country": "United States",
+    "Website": "https://airports.hawaii.gov/koa/"
+  },
+  "LAX": {
+    "Airport Name": "Los Angeles International Airport",
+    "Easy Name": "Los Angeles International Airport",
+    "Country": "United States",
+    "Website": "https://www.flylax.com/"
+  },
+  "MSP": {
+    "Airport Name": "Minneapolis–Saint Paul International Airport",
+    "Easy Name": "Minneapolis–Saint Paul International Airport",
+    "Country": "United States",
+    "Website": "https://www.mspairport.com/"
+  },
+  "NGO": {
+    "Airport Name": "Chubu Centrair International Airport",
+    "Easy Name": "Nagoya Airport",
+    "Country": "Japan",
+    "Website": "https://www.centrair.jp/en/index.html"
+  },
+  "NRT": {
+    "Airport Name": "Narita International Airport",
+    "Easy Name": "Narita International Airport",
+    "Country": "Japan",
+    "Website": "https://www.narita-airport.jp/en"
+  },
+  "OKA": {
+    "Airport Name": "Naha Airport",
+    "Easy Name": "Naha Airport",
+    "Country": "Japan",
+    "Website": "https://www.naha-airport.co.jp/en/"
+  },
+  "ORD": {
+    "Airport Name": "Chicago O'Hare International Airport",
+    "Easy Name": "Chicago O'Hare International Airport",
+    "Country": "United States",
+    "Website": "https://www.flychicago.com/ohare/home/pages/default.aspx"
+  },
+  "PDX": {
+    "Airport Name": "Portland International Airport",
+    "Easy Name": "Portland International Airport",
+    "Country": "United States",
+    "Website": "https://www.flypdx.com/"
+  },
+  "SAN": {
+    "Airport Name": "San Diego International Airport",
+    "Easy Name": "San Diego International Airport",
+    "Country": "United States",
+    "Website": "https://www.san.org/"
+  },
+  "SEA": {
+    "Airport Name": "Seattle-Tacoma International Airport",
+    "Easy Name": "Seattle-Tacoma International Airport",
+    "Country": "United States",
+    "Website": "https://www.portseattle.org/sea-tac"
+  },
+  "SFO": {
+    "Airport Name": "San Francisco International Airport",
+    "Easy Name": "San Francisco International Airport",
+    "Country": "United States",
+    "Website": "https://www.flysfo.com/"
+  },
+  "SJC": {
+    "Airport Name": "San Jose Mineta International Airport",
+    "Easy Name": "San Jose International Airport",
+    "Country": "United States",
+    "Website": "https://www.flysanjose.com/"
+  },
+  "TPE": {
+    "Airport Name": "Taiwan Taoyuan International Airport",
+    "Easy Name": "Taiwan Taoyuan International Airport",
+    "Country": "Taiwan",
+    "Website": "https://www.taoyuan-airport.com/?lang=en"
+  },
+  "YUL": {
+    "Airport Name": "Montréal-Pierre Elliott Trudeau International Airport",
+    "Easy Name": "Montréal–Dorval International Airport",
+    "Country": "Canada",
+    "Website": "https://www.admtl.com/en"
+  },
+  "YVR": {
+    "Airport Name": "Vancouver International Airport",
+    "Easy Name": "Vancouver International Airport",
+    "Country": "Canada",
+    "Website": "https://www.yvr.ca/en/passengers"
+  },
+  "YYC": {
+    "Airport Name": "Calgary International Airport",
+    "Easy Name": "Calgary International Airport",
+    "Country": "Canada",
+    "Website": "https://www.yyc.com/"
+  },
+  "YYZ": {
+    "Airport Name": "Lester B. Pearson International Airport",
+    "Easy Name": "Toronto Pearson International Airport",
+    "Country": "Canada",
+    "Website": "https://www.torontopearson.com/en"
+  }
+}
