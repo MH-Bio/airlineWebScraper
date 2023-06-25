@@ -22,6 +22,32 @@
     }
   },
 
+  "Southwest Airlines": {
+    "Website": "https://www.southwest.com/",
+    "Routes": {
+      "PDX": [
+        "HNL",
+        "KOA",
+        "SFO",
+        "LAX",
+        "SAN",
+        "SJC",
+        "SEA",
+        "DEN",
+        "DTW",
+        "ORD",
+        "MSP",
+        "ATL",
+        "IAH"
+      ],
+      "EUG": [
+        "LAX",
+        "SAN",
+        "SJC"
+      ]
+    }
+  },
+
   "United Airlines":{
     "Website":"https://www.united.com/en/us",
     "Routes": {
