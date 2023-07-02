@@ -1,4 +1,5 @@
 import os # used to get file name
+import json
 import re
 from sys import _getframe # Used to get function names from within function
 
@@ -69,5 +70,25 @@ class priceInformation:
         self.economyPremiumPrice = economyPremiumPrice
         self.businessClassPrice = businessClassPrice
 
+def destinationListGenerator(airlineName):
+    """Returns a list of routesthat will be used when entering a route on an airline's website.
+       Keep in mind that this is only one half of the tirp, and is the higher ranking item in the JSON file.
+       For international flights this will be the arrival airport.
+       For domestic flights, this will be the departure airport."""
+    with open('airlineRoutes.json') as f:
+        airlineData = json.load(f)
 
+    destinationList = []
+    airlineRoute = airlineData[airlineName]['Routes']
+    for destination in airlineRoute:
+        destinationList.append(destination)
 
+    return destinationList
+
+def getLongAirportCityName(airportCode):
+    """Takes a three letter airport code and returns the city name of the airport.
+    For example PDX will return Portland.  This function obtains information from the airportInfo.json file"""
+    with open('airportInfo.json', encoding="utf8") as f:
+        airportInfo = json.load(f)
+
+    return airportInfo[airportCode]["City"]
