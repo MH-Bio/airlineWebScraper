@@ -31,21 +31,27 @@ class currentTime:
         self.currentYear = datetime.now().year
 
 def getCurrentSecond():
+    """Returns current seconds as an int"""
     return datetime.now().second
 
 def getCurrentMinute():
+    """Returns current minute as an int"""
     return datetime.now().minute
 
 def getCurrentHour():
+    """Returns current hour as an int in the 24 hour format"""
     return datetime.now().hour
 
 def getCurrentDay():
+    """Returns the current day as an int"""
     return datetime.now().day
 
 def getCurrentMonth():
+    """Returns the current month as an int"""
     return datetime.now().month
 
 def getCurrentYear():
+    """Returns the current day as an int"""
     return datetime.now().year
 
 def getMonthStrShort(monthNum):
@@ -117,3 +123,61 @@ def get_day_of_week(year, month, day):
     day_of_week = np.where(x == day)[1][0] + 1
 
     return day_of_week
+
+def convert_to_next_day(year, month, day):
+    """Takes an input date and returns a year, month, day.
+    This will take into account month rollovers (e.g. July 31st + 1 day is August 1st)"""
+    adjustedYear = -1
+    adjustedMonth = -1
+    adjustedDay = -1
+
+    leapYear = False
+    if year % 400 == 0 or (year % 100 != 0 and year % 4 == 0):
+        leapYear = True
+
+    # 30 days september, apr, june, nov
+    # 31 days in jan, mar, may, july, aug, oct, dec
+
+    if month == 12 and day == 31:
+        adjustedYear = year + 1
+        adjustedMonth = 1
+        adjustedDay = 1
+    elif month == 2: # February handling
+        if leapYear == True:
+            if day == 29:
+                adjustedYear = year
+                adjustedMonth = 3
+                adjustedDay = 1
+            else:
+                adjustedYear = year
+                adjustedMonth = month
+                adjustedDay = day + 1
+        else:
+            if day == 28:
+                adjustedYear = year
+                adjustedMonth = 3
+                adjustedDay = 1
+            else:
+                adjustedYear = year
+                adjustedMonth = month
+                adjustedDay = day + 1
+    elif month in [4, 6, 9, 11]: # april, june, sep, nov
+        if day == 30:
+            adjustedYear = year
+            adjustedMonth = month + 1
+            adjustedDay = 1
+        else:
+            adjustedYear = year
+            adjustedMonth = month
+            adjustedDay = day + 1
+    else: # all other months have 31 days
+        if day == 31:
+            adjustedYear = year
+            adjustedMonth = month + 1
+            adjustedDay = 1
+        else:
+            adjustedYear = year
+            adjustedMonth = month
+            adjustedDay = day + 1
+
+    return adjustedYear, adjustedMonth, adjustedDay
